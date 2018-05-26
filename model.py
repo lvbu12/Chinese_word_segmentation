@@ -277,7 +277,7 @@ class My_HMM(object):
 
     def score(self, string):
         """
-        前向算法。
+        前向算法, Forward algorithm.
         :param string:
         :return:
         final_prob -- probability of the sentence exists.
@@ -314,7 +314,7 @@ class My_HMM(object):
 
 
 
-hmm = My_HMM('RenMinData.txt_utf8')
+hmm = My_HMM('Corpus/RenMinData.txt_utf8')
 # hmm.get_init_prob(load=True, path='Model_MLE/init_prob.pkl')
 # hmm.get_trans_prob(load=True, path='./Model_MLE/trans_prob.pkl')
 # hmm.get_char2idx(load=False, path='./Model_MLE/char2idx.pkl')
@@ -322,6 +322,6 @@ hmm = My_HMM('RenMinData.txt_utf8')
 sent = '小明的女朋友叫小花。'
 print(sent)
 print(' '.join(hmm.cut(sent)))
-hmm.test('test.txt')
+hmm.test('Corpus/test.txt')
 
 
